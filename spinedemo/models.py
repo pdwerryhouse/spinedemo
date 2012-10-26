@@ -27,8 +27,8 @@ class Person(Base):
     __tablename__ = 'persons'
     
     id = Column(Integer, primary_key=True)
-    firstname = Column(Unicode(255), unique=True)
-    surname = Column(Unicode(255), unique=True)
+    firstname = Column(Unicode(255))
+    surname = Column(Unicode(255))
     country_id = Column(Integer, ForeignKey('countries.id'))
     country = relationship("Country", backref=backref('persons', order_by=id))
 

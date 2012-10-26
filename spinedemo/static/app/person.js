@@ -27,6 +27,12 @@ var PersonApp = Spine.Controller.sub({
     Person.bind("create",  this.proxy(this.addOne));
     Person.bind("refresh", this.proxy(this.addAll));
     Person.fetch();
+    Country.fetch();
+/*
+    alert("hi");
+    var countries = Country.all();
+    $.each(countries, function(index, value) { console.log(value.id + " " + value.name); });
+*/
   },
 
   addOne: function(person){

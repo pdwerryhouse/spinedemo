@@ -36,7 +36,8 @@
 		<form id="personform">
 			<input id="firstname" name="firstname" type="text" placeholder="First Name..."></input>
 			<input id="surname" name="surname" type="text" placeholder="Surname..."></input>
-			<input id="country_id" name="country_id" type="hidden" value="1"></input>
+			<select id="country_id" name="country_id">
+			</select>
 			<input type="submit"/>
 		</form>
 	</div>

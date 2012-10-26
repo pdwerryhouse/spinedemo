@@ -35,7 +35,7 @@ def update_country(request):
     id = request.json_body['id']
 
     country = session.query(Country).get(id)
-    country.firstname = request.json_body['firstname']
+    country.name = request.json_body['name']
 
     session.add(country)
     session.flush()
@@ -51,7 +51,7 @@ def create_country(request):
     session = DBSession()
 
     country = Country()
-    country.firstname = request.json_body['firstname']
+    country.name = request.json_body['name']
 
     session.add(country)
     session.flush()

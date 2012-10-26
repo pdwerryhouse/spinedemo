@@ -2,6 +2,7 @@
 var Country = Spine.Model.sub();
 
 Country.configure("Country", "name");
+Country.hasMany("persons", "Person");
 
 Country.extend(Spine.Model.Ajax);
 
