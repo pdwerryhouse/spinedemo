@@ -4,6 +4,10 @@
 	<p>HELLO</p>
 </script>
 
+<script type="text/x-jquery-tmpl" id="countryOption">
+      <option value="${"${id}" | n}">${"${name}" | n}</option>
+</script>
+
 <script type="text/x-jquery-tmpl" id="countryTemplate">
   <div class="item">
     <div class="view">
@@ -22,6 +26,9 @@
 </script>
 
 <div id="views">
+
+	<div id="view">
+	</div>
 
 	<div id="countries">
 		<div class="items"></div>

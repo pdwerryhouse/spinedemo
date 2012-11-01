@@ -18,9 +18,9 @@ var PersonApp = Spine.Controller.sub({
 
   elements: {
     ".items": "items",
-    "form #firstname": "firstname",
-    "form #surname": "surname",
-    "form #country_id": "country_id"
+    "#personform #firstname": "firstname",
+    "#personform #surname": "surname",
+    "#personform #country_id": "country_id"
   },
 
   init: function(){

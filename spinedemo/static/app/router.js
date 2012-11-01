@@ -4,9 +4,17 @@ jQuery(function($) {
   // This will go when I figure out how to display only one form at
   // a time.
 
-  $("#countries").text("");
+ $("#countries").text("");
   return new PersonApp({
     el: $("#persons")
   });
+
+/*
+  $("#persons").text("");
+  return new CountryApp({
+    el: $("#countries")
+  });
+*/
+
 });
 

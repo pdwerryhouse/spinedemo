@@ -11,8 +11,14 @@ Country.extend({
 });
 
 var CountryApp = Spine.Controller.sub({
+  events: {
+    "submit form": "create",
+    "click .clear": "clear"
+  },
+
   elements: {
-    ".items": "items"
+    ".items": "items",
+    "#countryform #name": "name"
   },
 
   init: function(){
@@ -28,6 +34,18 @@ var CountryApp = Spine.Controller.sub({
 
   addAll: function(){
     Country.each(this.proxy(this.addOne));
+  },
+
+  create: function(e) {
+    e.preventDefault();
+    Country.create({
+        name: this.name.val()
+    });
+    this.name.val("");
+  },
+
+  clear: function() {
+    Country.destroyDone();
   }
 });
 
